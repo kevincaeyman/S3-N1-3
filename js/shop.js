@@ -77,7 +77,7 @@ function buy(id) {
     // 2. Add found product to the cartList array
 
     let foundProduct = products[id - 1]
-    
+
     for (x = 0; x < products.length; x++) {
         if (id - 1 === x) {
             cartList.push(foundProduct)
@@ -88,13 +88,18 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-cartList.length = 0
-console.log(cartList)
+    cartList.length = 0
+    console.log(cartList)
 }
 
 // Exercise 3
 function calculateTotal() {
     // Calculate total price of the cart using the "cartList" array
+    let total = 0
+    for (x = 0; x < cartList.length; x++) {
+        total += (cartList[x].price)
+    }
+    console.log(total)
 }
 
 // Exercise 4
